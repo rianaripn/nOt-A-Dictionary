@@ -8,6 +8,8 @@ const toast = document.getElementById('toast')
 const btnDefine = document.querySelector('.btn-define')
 const btnReset = document.querySelector('.btn-reset')
 
+
+
 function showToast(pesan){
     toast.innerHTML = `<p>${pesan}</p>`
     toast.classList.add('show')
