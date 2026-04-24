@@ -6,6 +6,9 @@ A dictionary app that tells you what words **actually** mean according to a sarc
 
 ---
 
+## LIVE DEMO
+https://not-a-dictionary.vercel.app/
+
 ## Features
 
 - 🔍 **Word Definition** — fetches real dictionary data (so the AI has something to roast)
