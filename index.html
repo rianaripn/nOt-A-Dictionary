@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>not-A Dictionary</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>nOt-A <span class="dictionary">dicTionary</span></h1>
+        <p style="text-transform: lowercase;">Because reality wasn't disappointing enough already.</p>
+    </header>
+    <main>
+        <section class="main-section">
+            <form id="formInput" class="form-input">
+                <input id="inputText" type="text" placeholder="go ahead, type your word  . . .">
+                <div class="btn-container">
+                    <button class="btn-define" type="submit">Define it</button>
+                    <p>[only if you want to]</p>
+                    <button class="btn-reset" type="button"> try another word</button>
+                </div>
+            </form>
+            
+            
+            <div id="hasilGenerate" class="hasil-generate">
+                <div class="empty-state">
+                    <h3 style="font-size: 65px;">🙎🏼‍♂️</h3>
+                    <p>Type a word up there. I know reading instructions is hard, but you can do it. Probably.</p>
+                </div>
+            </div>
+                
+        </section>
+        <div id="toast" class="toast">
+            <p>YOU'RE WELLCOME, I GUESS.🙄</p>
+        </div>
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
