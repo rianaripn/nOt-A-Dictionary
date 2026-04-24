@@ -1,0 +1,12 @@
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Environment (just in case)
+.env
