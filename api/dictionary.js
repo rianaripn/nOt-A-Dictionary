@@ -1,6 +1,6 @@
 const BASE_URL = "https://api.api-ninjas.com/v1/dictionary"
 
-module.exports = async function handler(req,res){
+export default async function handler(req,res){
     const searchedWordApi = req.query.word;
     const url = `${BASE_URL}?word=${searchedWordApi}`
     try{

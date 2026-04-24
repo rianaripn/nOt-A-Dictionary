@@ -11,9 +11,6 @@ export async function generateWordAi(word,definition){
         if(!response.ok){
             throw new Error("The AI refused to speak to you. Probably for the best🙄. try to use the ACTUAL word!")
         }
-        const text = await response.text()
-        console.log('RAW RESPONSE:', text)
-
         const data = await response.json()
         return data.aiResponse
     } catch(err){
