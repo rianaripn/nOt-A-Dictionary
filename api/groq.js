@@ -5,7 +5,21 @@ export default async function handler(req, res) {
     console.log('body:', req.body)
     console.log('body type:', typeof req.body)
     
-    return res.status(200).json({ debug: true, body: req.body, method: req.method })
+    // Parse body manual dari stream
+    let rawBody = ''
+    await new Promise((resolve) => {
+        req.on('data', chunk => rawBody += chunk)
+        req.on('end', resolve)
+    })
+    
+    console.log('rawBody:', rawBody)
+    
+    return res.status(200).json({ 
+        debug: true, 
+        body: req.body, 
+        method: req.method,
+        rawBody: rawBody
+    })
 }
 
 
