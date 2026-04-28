@@ -1,8 +1,13 @@
 const BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 export default async function handler(req,res){
-    const wordOfChoices = req.body.word;
-    const theDefinition = req.body.definition;
+    let body = req.body
+    if(typeof body === 'string'){
+        body = JSON.parse(body)
+    }
+    
+    const wordOfChoices = body.word;
+    const theDefinition = body.definition;
     const prompt = `
     word = ${wordOfChoices}
     definition = ${theDefinition}
