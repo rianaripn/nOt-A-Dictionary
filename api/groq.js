@@ -1,6 +1,5 @@
 const BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-const BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 export default async function handler(req, res) {
     const { word, definition } = req.body
     const prompt = `
