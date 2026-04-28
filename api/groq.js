@@ -1,9 +1,15 @@
 const BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 export default async function handler(req,res){
+    console.log('req.body:', req.body)
+    console.log('req.method:', req.method)
     let body = req.body
     if(typeof body === 'string'){
         body = JSON.parse(body)
+    }
+
+    if (!body) {
+        return res.status(400).json({ error: 'body is undefined' })
     }
     
     const wordOfChoices = body.word;
